@@ -764,6 +764,13 @@ body.light-theme .pt-element.tool { border-color: #db2777; color: #9d174d; }
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 3rem;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.case-study:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .case-left h3 {
@@ -866,6 +873,13 @@ body.light-theme .pt-element.tool { border-color: #db2777; color: #9d174d; }
     padding: var(--spacing-m);
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.edu-item:not(.sub-edu):hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .edu-item h4 {
