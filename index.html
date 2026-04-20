@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Bansal | Data Science Portfolio</title>
+
+    <!-- Fonts: Lora (Headlines), Outfit (Body), Fira Code (Monospace) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+
+    <!-- STATS TICKER -->
+    <div class="stats-ticker">
+        <div class="ticker-content" id="ticker-text">
+            <span>30+ models trained</span> <span class="separator">/</span>
+            <span>3+ end-to-end projects</span> <span class="separator">/</span>
+            <span>10+ mini projects</span> <span class="separator">/</span>
+            <span>9.32 CGPA</span> <span class="separator">/</span>
+            <span>System Pipeline Engaged</span>
+        </div>
+    </div>
+
+    <!-- STICKY NAV -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#hero">Init</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#writings">Blogs</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="https://drive.google.com/file/d/1u5o5YgH62b6ytFF9Q10b2bH2gebKN793/view?usp=sharing" target="_blank"
+                class="nav-resume-btn" title="Download Resume">
+                <i class="fas fa-download"></i> <span class="resume-text">Resume</span>
+            </a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- SECTION 1: HERO -->
+        <section id="hero" class="hero section-scroll">
+            <div class="hero-content">
+                <div class="hero-text-area">
+                    <h1 class="hero-name">Divya Bansal</h1>
+                    <p class="hero-descriptor">BTech CSE (Data Science) | Bennett University | 2023-2027</p>
+                    <p class="hero-roles">Data Analyst · Data Scientist · AI/ML Engineer · Software Development</p>
+
+                    <div class="pipeline-container">
+                        <!-- SVG Data Pipeline (Animated via CSS) -->
+                        <svg width="100%" height="100" viewBox="0 0 800 100" class="pipeline-svg"
+                            preserveAspectRatio="xMidYMid meet">
+                            <g class="nodes">
+                                <rect x="10" y="30" width="100" height="40" rx="4" class="node-box"></rect>
+                                <text x="60" y="55" text-anchor="middle" class="node-text">Raw Data</text>
+
+                                <rect x="150" y="30" width="100" height="40" rx="20" class="node-box proc"></rect>
+                                <text x="200" y="55" text-anchor="middle" class="node-text">Cleaning</text>
+
+                                <polygon points="340,30 360,50 340,70 290,70 290,30" class="node-box proc"></polygon>
+                                <text x="320" y="55" text-anchor="middle" class="node-text">EDA</text>
+
+                                <circle cx="450" cy="50" r="25" class="node-box model"></circle>
+                                <text x="450" y="55" text-anchor="middle" class="node-text">Model</text>
+
+                                <rect x="530" y="30" width="100" height="40" rx="4" class="node-box insight"></rect>
+                                <text x="580" y="55" text-anchor="middle" class="node-text">Insight</text>
+
+                                <rect x="670" y="25" width="100" height="50" rx="8" class="node-box impact"></rect>
+                                <text x="720" y="55" text-anchor="middle" class="node-text impact-text">Impact</text>
+                            </g>
+                            <g class="flows">
+                                <line x1="110" y1="50" x2="150" y2="50" class="flow-line"></line>
+                                <line x1="250" y1="50" x2="290" y2="50" class="flow-line"></line>
+                                <line x1="360" y1="50" x2="425" y2="50" class="flow-line"></line>
+                                <line x1="475" y1="50" x2="530" y2="50" class="flow-line"></line>
+                                <line x1="630" y1="50" x2="670" y2="50" class="flow-line"></line>
+                            </g>
+                            <g class="particles"></g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="hero-profile-area">
+                    <img src="profile.jpg" alt="Divya Bansal" class="profile-pic"
+                        onerror="this.src='https://via.placeholder.com/200';">
+                    <div class="social-links-vertical">
+                        <a href="https://github.com/Divyabansal20" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> <span class="link-label">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/divya-bansal01" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i> <span class="link-label">LinkedIn</span>
+                        </a>
+                        <a href="https://medium.com/@bansaldivya20082005" target="_blank" rel="noopener">
+                            <i class="fab fa-medium-m"></i> <span class="link-label">Medium</span>
+                        </a>
+                        <a href="https://leetcode.com/u/DivyaBansal-20/" target="_blank" rel="noopener">
+                            <i class="fas fa-code"></i> <span class="link-label">LeetCode</span>
+                        </a>
+                        <a href="https://codolio.com/profile/divyabansal20" target="_blank" rel="noopener">
+                            <i class="fas fa-terminal"></i> <span class="link-label">Codolio</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MY STORY -->
+        <section id="story" class="story section-scroll">
+            <h2 class="section-title">Runtime Journey</h2>
+            <div class="story-grid">
+                <div class="story-text">
+                    <p>I grew up not particularly loving CS — in fact, I used to hate it in school. Then in Class 11 and
+                        12, I took CS and it crept into my world slowly. I landed in BTech almost by default — "let's
+                        just take Computer Science" — and spent the first phase of it trying everything: fullstack
+                        development, software engineering, building apps. None of it stuck the way I expected.</p>
+                    <p>Then I touched data. EDA on a messy dataset, a model that actually predicted something real, a
+                        dashboard that made a business insight visible — and suddenly the whole field made sense to me.
+                        I didn't just find a career path. I found the thing I was good at and <em>liked</em> being good
+                        at.</p>
+                    <p>Now I am a Dean's List student with a 9.32 CGPA, who has interned in Data Science, built ML
+                        models for real-world problems, and who writes on Medium to make sense of what I learn.</p>
+                    <blockquote class="pull-quote">
+                        "I didn't choose data science. Data science chose me — after I'd already tried everything else."
+                    </blockquote>
+                </div>
+                <div class="story-timeline">
+                    <div class="timeline-node" data-info="Hated CS initially.">1. Early Days</div>
+                    <div class="timeline-node" data-info="Class 11/12: Started learning the logic.">2. First Lines</div>
+                    <div class="timeline-node" data-info="BTech default choice. Tried fullstack, SWE.">3. The Wilderness
+                    </div>
+                    <div class="timeline-node core" data-info="Did my first EDA. Things clicked.">4. Data Awakens</div>
+                    <div class="timeline-node" data-info="Built models, scored Dean's List.">5. Momentum</div>
+                    <div class="timeline-node" data-info="Data Science Intern & Writing.">6. The Now</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SKILLS — PERIODIC TABLE -->
+        <section id="skills" class="skills section-scroll">
+            <h2 class="section-title">Stack & Strengths</h2>
+            <p class="section-desc">A periodic table of tools, technologies, and concepts powering my data pipelines.
+            </p>
+
+            <div class="periodic-table">
+                <!-- Row 1: 2 elements spread apart -->
+                <div class="pt-element lang" style="grid-column: 1; grid-row: 1;">
+                    <span class="pt-number">1</span>
+                    <span class="pt-symbol">Py</span>
+                    <span class="pt-name">Python</span>
+                </div>
+                <div class="pt-element lang" style="grid-column: 10; grid-row: 1;">
+                    <span class="pt-number">2</span>
+                    <span class="pt-symbol">Sq</span>
+                    <span class="pt-name">SQL</span>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="pt-element lang" style="grid-column: 1; grid-row: 2;">
+                    <span class="pt-number">3</span>
+                    <span class="pt-symbol">Cp</span>
+                    <span class="pt-name">C++</span>
+                </div>
+                <div class="pt-element cs" style="grid-column: 2; grid-row: 2;">
+                    <span class="pt-number">4</span>
+                    <span class="pt-symbol">Da</span>
+                    <span class="pt-name">DSA</span>
+                </div>
+                <div class="pt-element cs" style="grid-column: 7; grid-row: 2;">
+                    <span class="pt-number">5</span>
+                    <span class="pt-symbol">Sd</span>
+                    <span class="pt-name">Sys Design</span>
+                </div>
+                <div class="pt-element cs" style="grid-column: 8; grid-row: 2;">
+                    <span class="pt-number">6</span>
+                    <span class="pt-symbol">Os</span>
+                    <span class="pt-name">OS</span>
+                </div>
+                <div class="pt-element cs" style="grid-column: 9; grid-row: 2;">
+                    <span class="pt-number">7</span>
+                    <span class="pt-symbol">Cn</span>
+                    <span class="pt-name">Networks</span>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="pt-element ai" style="grid-column: 1; grid-row: 3;">
+                    <span class="pt-number">8</span>
+                    <span class="pt-symbol">Ml</span>
+                    <span class="pt-name">Machine Learning</span>
+                </div>
+                <div class="pt-element ai" style="grid-column: 2; grid-row: 3;">
+                    <span class="pt-number">9</span>
+                    <span class="pt-symbol">Nl</span>
+                    <span class="pt-name">NLP</span>
+                </div>
+                <div class="pt-element ai" style="grid-column: 3; grid-row: 3;">
+                    <span class="pt-number">10</span>
+                    <span class="pt-symbol">Ga</span>
+                    <span class="pt-name">Gen AI</span>
+                </div>
+                <div class="pt-element ds" style="grid-column: 5; grid-row: 3;">
+                    <span class="pt-number">11</span>
+                    <span class="pt-symbol">Ed</span>
+                    <span class="pt-name">EDA</span>
+                </div>
+                <div class="pt-element ds" style="grid-column: 6; grid-row: 3;">
+                    <span class="pt-number">12</span>
+                    <span class="pt-symbol">Sa</span>
+                    <span class="pt-name">Statistics</span>
+                </div>
+                <div class="pt-element ds" style="grid-column: 7; grid-row: 3;">
+                    <span class="pt-number">13</span>
+                    <span class="pt-symbol">Fe</span>
+                    <span class="pt-name">Feature Eng.</span>
+                </div>
+                <div class="pt-element ds" style="grid-column: 8; grid-row: 3;">
+                    <span class="pt-number">14</span>
+                    <span class="pt-symbol">Pm</span>
+                    <span class="pt-name">Pred. Model</span>
+                </div>
+                <div class="pt-element ds" style="grid-column: 9; grid-row: 3;">
+                    <span class="pt-number">15</span>
+                    <span class="pt-symbol">Ts</span>
+                    <span class="pt-name">Time Series</span>
+                </div>
+                <div class="pt-element ds" style="grid-column: 10; grid-row: 3;">
+                    <span class="pt-number">16</span>
+                    <span class="pt-symbol">Dc</span>
+                    <span class="pt-name">Data Clean</span>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="pt-element ai" style="grid-column: 1; grid-row: 4;">
+                    <span class="pt-number">17</span>
+                    <span class="pt-symbol">Me</span>
+                    <span class="pt-name">Model Eval</span>
+                </div>
+                <div class="pt-element ds" style="grid-column: 2; grid-row: 4;">
+                    <span class="pt-number">18</span>
+                    <span class="pt-symbol">Dv</span>
+                    <span class="pt-name">Data Viz</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 3; grid-row: 4;">
+                    <span class="pt-number">19</span>
+                    <span class="pt-symbol">Np</span>
+                    <span class="pt-name">NumPy</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 4; grid-row: 4;">
+                    <span class="pt-number">20</span>
+                    <span class="pt-symbol">Pd</span>
+                    <span class="pt-name">Pandas</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 5; grid-row: 4;">
+                    <span class="pt-number">21</span>
+                    <span class="pt-symbol">Sp</span>
+                    <span class="pt-name">SciPy</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 6; grid-row: 4;">
+                    <span class="pt-number">22</span>
+                    <span class="pt-symbol">Sk</span>
+                    <span class="pt-name">Scikit-learn</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 7; grid-row: 4;">
+                    <span class="pt-number">23</span>
+                    <span class="pt-symbol">Mp</span>
+                    <span class="pt-name">Matplotlib</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 8; grid-row: 4;">
+                    <span class="pt-number">24</span>
+                    <span class="pt-symbol">Sb</span>
+                    <span class="pt-name">Seaborn</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 9; grid-row: 4;">
+                    <span class="pt-number">25</span>
+                    <span class="pt-symbol">Bs</span>
+                    <span class="pt-name">BS4</span>
+                </div>
+                <div class="pt-element lib" style="grid-column: 10; grid-row: 4;">
+                    <span class="pt-number">26</span>
+                    <span class="pt-symbol">Se</span>
+                    <span class="pt-name">Selenium</span>
+                </div>
+
+                <!-- Row 5: centered tools -->
+                <div class="pt-element tool" style="grid-column: 3; grid-row: 5;">
+                    <span class="pt-number">27</span>
+                    <span class="pt-symbol">Sl</span>
+                    <span class="pt-name">Streamlit</span>
+                </div>
+                <div class="pt-element tool" style="grid-column: 4; grid-row: 5;">
+                    <span class="pt-number">28</span>
+                    <span class="pt-symbol">Pb</span>
+                    <span class="pt-name">Power BI</span>
+                </div>
+                <div class="pt-element tool" style="grid-column: 5; grid-row: 5;">
+                    <span class="pt-number">29</span>
+                    <span class="pt-symbol">Ex</span>
+                    <span class="pt-name">Excel</span>
+                </div>
+                <div class="pt-element tool" style="grid-column: 6; grid-row: 5;">
+                    <span class="pt-number">30</span>
+                    <span class="pt-symbol">Gt</span>
+                    <span class="pt-name">Git</span>
+                </div>
+                <div class="pt-element tool" style="grid-column: 7; grid-row: 5;">
+                    <span class="pt-number">31</span>
+                    <span class="pt-symbol">My</span>
+                    <span class="pt-name">MySQL</span>
+                </div>
+                <div class="pt-element tool" style="grid-column: 8; grid-row: 5;">
+                    <span class="pt-number">32</span>
+                    <span class="pt-symbol">Fb</span>
+                    <span class="pt-name">Firebase</span>
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="pt-legend">
+                <div class="pt-legend-item"><span class="pt-legend-color lang"></span> Languages</div>
+                <div class="pt-legend-item"><span class="pt-legend-color cs"></span> Core CS</div>
+                <div class="pt-legend-item"><span class="pt-legend-color ai"></span> AI & ML</div>
+                <div class="pt-legend-item"><span class="pt-legend-color ds"></span> Data Science</div>
+                <div class="pt-legend-item"><span class="pt-legend-color lib"></span> Libraries</div>
+                <div class="pt-legend-item"><span class="pt-legend-color tool"></span> Tools & Platforms</div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: PROJECTS -->
+        <section id="projects" class="projects section-scroll">
+            <h2 class="section-title">What I’ve Built</h2>
+            <div class="project-grid">
+
+                <!-- Project 1 -->
+                <div class="model-card">
+                    <div class="card-header">
+                        <span class="badge">Forecasting</span>
+                        <a href="https://github.com/Divyabansal20/Crop_Stress_Predictor_Punjab_Haryana" target="_blank"
+                            class="card-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3 class="card-title">Crop Health Predictive Model &mdash; Punjab & Haryana Agricultural
+                        Forecasting</h3>
+                    <div class="metric-pill">Result: R² = 81.85% | MAE = 0.057</div>
+                    <p class="card-body">Designed an end-to-end time-series pipeline using XGBoost & SARIMAX to forecast
+                        NDVI from 3 years of multi-source data (satellite, weather, soil). Engineered domain elements
+                        like Heatwave Index to capture complex seasonality.</p>
+
+                    <div class="tool-chips">
+                        <span>Python</span><span>XGBoost</span><span>SARIMAX</span><span>Feat. Eng.</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="model-card">
+                    <div class="card-header">
+                        <span class="badge">Auditing Pipeline</span>
+                        <a href="https://github.com/Divyabansal20/Data-quality-trust-system" target="_blank"
+                            class="card-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3 class="card-title">Data Trust Scoring System &mdash; Automated Data Quality Audit Platform</h3>
+                    <div class="metric-pill">Impact: Significantly cut manual audit time</div>
+                    <p class="card-body">Built an end-to-end engine evaluating 5 analytical dimensions (Completeness,
+                        Validity, Accuracy, Consistency, Uniqueness) with a custom weighted penalty framework and
+                        skewness-aware outlier detection.</p>
+
+                    <div class="tool-chips">
+                        <span>Python</span><span>Streamlit</span><span>FPDF</span><span>Stat. Outliers</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="model-card">
+                    <div class="card-header">
+                        <span class="badge">NLP & LLMs</span>
+                        <a href="https://github.com/Divyabansal20/AI_Resume_Analyzer" target="_blank"
+                            class="card-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3 class="card-title">AI Resume Analyzer & Feedback System &mdash; LLM-Powered HR Tool</h3>
+                    <div class="metric-pill">Impact: HR-style structured feedback</div>
+                    <p class="card-body">Engineered an LLM application leveraging OpenRouter API and custom Prompt
+                        Engineering to parse PDF/DOCX resumes, identify skill gaps, and generate structured evaluations.
+                    </p>
+
+                    <div class="tool-chips">
+                        <span>OpenRouter API</span><span>Prompt Eng.</span><span>Streamlit</span><span>PyPDF2</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="model-card">
+                    <div class="card-header">
+                        <span class="badge">Conversational AI</span>
+                        <a href="https://github.com/Divyabansal20/AI_Career_Bot" target="_blank" class="card-link"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3 class="card-title">AI Career Advisor Assistant &mdash; Personalized LLM Career Platform</h3>
+                    <div class="metric-pill">Models: Llama, Mistral</div>
+                    <p class="card-body">Built a career guidance platform using LLMs via OpenRouter API to deliver
+                        real-time, AI-driven roadmap suggestions based on user skill sets and goals.</p>
+
+                    <div class="tool-chips">
+                        <span>LLMs</span><span>OpenRouter API</span><span>Python</span><span>Streamlit Cloud</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="model-card">
+                    <div class="card-header">
+                        <span class="badge">Business Intelligence</span>
+                        <a href="https://github.com/Divyabansal20/Ecommerce-Sales-Dashboard" target="_blank"
+                            class="card-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <h3 class="card-title">E-Commerce Sales Dashboard &mdash; Power BI Business Intelligence Solution
+                    </h3>
+                    <div class="metric-pill">Impact: Reporting time cut ~40%</div>
+                    <p class="card-body">Analyzed 1,500+ orders and engineered an interactive Power BI Dashboard with
+                        cross-table relationships to visualize sales trends across regions, categories, and time
+                        periods.</p>
+
+                    <div class="tool-chips">
+                        <span>Power BI</span><span>Data Viz</span><span>Data Modeling</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: INTERNSHIP -->
+        <section id="experience" class="internship section-scroll">
+            <h2 class="section-title">Professional Exposure</h2>
+            <div class="case-study">
+                <div class="case-left">
+                    <h3>Data Science Intern</h3>
+                    <p class="company">Imarticus Learning (Remote) <span class="term">| June 2025</span></p>
+                    <ul class="task-list">
+                        <li>Built a Customer Database Management System in MySQL for 3 integrated datasets,
+                            significantly improving retrieval efficiency for a team of 6.</li>
+                        <li>Ran comprehensive EDA on a 1,000+ employee wellness dataset, surfacing 10+ actionable
+                            insights for organizational mental health strategy.</li>
+                        <li>Built a Power BI dashboard for an electric vehicle dataset, establishing clear visual
+                            insight narratives.</li>
+                    </ul>
+                </div>
+                <div class="case-right">
+                    <div class="data-card border-accent">
+                        <div class="data-val">10+</div>
+                        <div class="data-label">Actionable HR Insights Generated</div>
+                    </div>
+                    <div class="data-card border-sub">
+                        <div class="data-val">3</div>
+                        <div class="data-label">Datasets Integrated (MySQL)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUB-SECTIONS (Flex Layout) -->
+        <div class="sub-sections-grid section-scroll">
+
+            <div class="left-col-edu-certs">
+                <!-- SECTION 7: CERTS -->
+                <section id="certifications" class="certifications block">
+                    <h2 class="section-title small">Certifications</h2>
+                    <a href="https://drive.google.com/file/d/1yTehh0eEW0B0vU7Otsz3CX4oKlpT8Ms2/view?usp=sharing"
+                        target="_blank" class="cert-card interactive-card">
+                        <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="cert-info">
+                            <h4>ServiceNow</h4>
+                            <p>Certified System Administrator</p>
+                        </div>
+                        <div class="cert-badge">View Certificate <i class="fas fa-arrow-right"></i></div>
+                    </a>
+                </section>
+
+                <!-- SECTION 6: EDUCATION -->
+                <section id="academics" class="education block mt-l">
+                    <h2 class="section-title small">Academics</h2>
+                    <div class="edu-item">
+                        <h4>B.Tech CSE (Data Science)</h4>
+                        <p>Bennett University | Aug 2023 – May 2027</p>
+                        <div class="mega-metric">
+                            <span class="cgpa">9.32</span><span class="cgpa-scale">/10.0</span>
+                        </div>
+                        <div class="badge-streak">
+                            <span class="deans-badge"><i class="fas fa-medal"></i> Dean's List S1</span>
+                            <span class="deans-badge"><i class="fas fa-medal"></i> Dean's List S2</span>
+                            <span class="deans-badge"><i class="fas fa-medal"></i> Dean's List S3</span>
+                        </div>
+                    </div>
+                    <div class="edu-item sub-edu">
+                        <p><strong>Class 12:</strong> 94.4% | Delhi Public School Bulandshahr</p>
+                        <p><strong>Class 10:</strong> 100% | Delhi Public School Bulandshahr</p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right-col-blogs">
+                <!-- SECTION 8: BLOGGING -->
+                <section id="writings" class="blog block">
+                    <h2 class="section-title small">From Learning to Sharing</h2>
+                    <p class="blog-desc"><em>"I write to understand. Here's what I've been thinking about..."</em></p>
+
+                    <a href="https://medium.com/@bansaldivya20082005/data-has-gravity-and-its-pulling-your-startups-costs-down-fa3fffdb9ab9"
+                        target="_blank" class="blog-card">
+                        <span class="blog-tag">Data Strategy</span>
+                        <span class="blog-title">Data has GRAVITY - and its pulling your STARTups costs down</span>
+                        <span class="blog-time">Read Article →</span>
+                    </a>
+
+                    <a href="https://medium.com/@bansaldivya20082005/unlock-chatgpts-full-potential-here-s-why-you-have-been-using-it-wrong-a9d25608c47a"
+                        target="_blank" class="blog-card">
+                        <span class="blog-tag">Prompt Engineering</span>
+                        <span class="blog-title">Unlock CHATGPT’s Full Potential: Tips to get most out of AI</span>
+                        <span class="blog-time">Read Article →</span>
+                    </a>
+
+                    <a href="https://medium.com/@bansaldivya20082005/synthetic-data-the-ai-revolution-built-on-fake-realities-e24f8699c2b1"
+                        target="_blank" class="blog-card">
+                        <span class="blog-tag">Machine Learning</span>
+                        <span class="blog-title">SYNTHETIC DATA: The AI Revolution Built on Fake Realities</span>
+                        <span class="blog-time">Read Article →</span>
+                    </a>
+
+                    <a href="https://medium.com/@bansaldivya20082005/reworking-traditional-agriculture-the-role-of-ai-in-tackling-punjab-and-haryanas-crucial-farming-950eb3841131"
+                        target="_blank" class="blog-card">
+                        <span class="blog-tag">AI in Agriculture</span>
+                        <span class="blog-title">Reworking traditional Agriculture: The role of AI in tackling Punjab
+                            and Haryana’s crucial Farming challenges</span>
+                        <span class="blog-time">Read Article →</span>
+                    </a>
+                </section>
+            </div>
+        </div>
+
+        <!-- SECTION 9 & 10: CONTACT -->
+        <section id="contact" class="footer-area section-scroll">
+            <div class="contact-header align-center">
+                <h2 class="section-title small">Let's Connect</h2>
+                <p class="contact-desc">Open to internships, research collaborations, and interesting data problems.</p>
+            </div>
+
+            <div class="contact-split-layout">
+                <!-- Left: Contact Info -->
+                <div class="contact-info-left">
+                    <a href="mailto:bansaldivya20082005@gmail.com" class="contact-card interactive-card">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-card-text">
+                            <h3>Email</h3>
+                            <p>bansaldivya20082005@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-card interactive-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="contact-card-text">
+                            <h3>Phone</h3>
+                            <p>In Progress...</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card interactive-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-card-text">
+                            <h3>Location</h3>
+                            <p>Greater Noida, India</p>
+                        </div>
+                    </div>
+
+                    <div class="btn-row" style="text-align: left;">
+                        <a href="#" class="btn-download interactive-btn"><i class="fas fa-file-pdf"></i> Download
+                            Resume</a>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-right">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="sender-name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="sender-email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="sender-message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn interactive-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
