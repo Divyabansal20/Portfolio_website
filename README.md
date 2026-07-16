@@ -2,20 +2,20 @@
 
 Welcome to the source code of my personal data science portfolio website! This repository contains the frontend code that showcases my skills, projects, and journey in Data Science, Machine Learning, and AI.
 
-## 🌟 Features
+## Features
 - **Dynamic Data Pipeline Animation**: Custom SVG and CSS-based hero animation depicting a data science workflow.
 - **Interactive Skills Periodic Table**: A unique layout for demonstrating my technical stack across languages, core CS, AI/ML, and tools.
 - **Theme Toggle**: Built-in support for Light and Dark modes.
 - **Mobile Responsive**: Fluid layout utilizing CSS Flexbox and Grid, adapting to all screen sizes.
 - **Project Showcase**: Highlights key ML and Data Science projects with metrics and tools used.
 
-## 🛠️ Built With
+## Built With
 - **HTML5**: Semantic and accessible document structure.
 - **CSS3**: Custom properties (variables), Flexbox, CSS Grid, and animations.
 - **Vanilla JavaScript**: DOM manipulation, smooth scrolling, theme toggling, and intersection observers.
 - **FontAwesome**: Scalable vector icons.
 
-## 🚀 Getting Started Local Setup
+## Getting Started Local Setup
 To run this project locally, simply clone the repository and open `index.html` in your web browser. 
 
 Alternatively, if you have Python installed, you can serve the site locally to prevent CORS issues with local fonts or assets:
